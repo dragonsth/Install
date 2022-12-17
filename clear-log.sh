@@ -1,1 +1,1 @@
-clear-log.sh
+# clear-log.sh
