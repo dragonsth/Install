@@ -172,7 +172,7 @@ service sslh restart
 
 
 #install badvpncdn
-wget https://github.com/ambrop72/badvpn/archive/master.zip
+wget https://github.com/dragonsth/install/raw/main/master.zip
 unzip master.zip
 cd badvpn-master
 mkdir build
