@@ -74,7 +74,7 @@ clear
 cert
 echo " echo ' WELCOME   ' " >> .profile
 echo " echo ' AOTU MINI SCRIPT        '" >> .profile
-echo " echo '' BY DRAGONSTH     '" >> .profile
+echo " echo ' ติดต่อ​เจ้าของสคริป​ t.me/dragonsth     '" >> .profile
 echo '============================================='
 echo "                ติดตั้งสำเร็จแล้ว"
 echo '============================================='
