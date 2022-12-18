@@ -74,7 +74,7 @@ clear
 cert
 echo " echo ' WELCOME   ' " >> .profile
 echo " echo ' AOTU MINI SCRIPT        '" >> .profile
-echo " echo ' ติดต่อ​เจ้าของสคริป​ t.me/dragonsth     '" >> .profile
+echo " echo ' OPENVPN-INSTALL BY/dragonsth     '" >> .profile
 echo '============================================='
 echo "                ติดตั้งสำเร็จแล้ว"
 echo '============================================='
@@ -92,7 +92,6 @@ echo "   - Dropbear                : 109, 143"  | tee -a log-install.txt
 echo "   - Squid Proxy             : 3128, 8080 (limit to IP Server)"  | tee -a log-install.txt
 echo "   - Badvpn                  : 7100, 7200, 7300"  | tee -a log-install.txt
 echo "   - Nginx                   : 81"  | tee -a log-install.txt
-echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
 echo "   - Timezone                : Asia/Bangkok (GMT +7)"  | tee -a log-install.txt
 echo "   - Fail2Ban                : [ON]"  | tee -a log-install.txt
