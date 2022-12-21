@@ -44,7 +44,6 @@ echo -e "* multi        : แสดงบัญชีที่เข้าใช
 echo -e "* restart      : รีสตาร์ท  Dropbear, Squid3, OpenVPN และ SSH"
 echo -e "************************************************************" | lolcat
 echo -e "                    ตั้งค่าระบบ"
-echo -e "* cert         : ต่ออายุ Certificate ของบัญชี V2ray" 
 echo -e "* backup       : แบ็คอัพข้อมูล"
 echo -e "* restore      : กู้ข้อมูล"
 echo -e "* port         : แก้ไขหรือเปลี่ยนพอร์ต"
