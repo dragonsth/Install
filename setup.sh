@@ -66,9 +66,15 @@ echo '============================================='
 echo '        กรุณารอสักครู่....! '
 echo '============================================='
 rm -f /root/ssh-vpn.sh
+rm -f /root/ins-vt.sh
 history -c
 echo "1.2" > /home/ver
 clear
+#cert 
+cert
+echo " echo ' WELCOME   ' " >> .profile
+echo " echo ' AOTU MINI SCRIPT        '" >> .profile
+echo " echo ' OPENVPN-INSTALL BY/dragonsth     '" >> .profile
 echo '============================================='
 echo "                ติดตั้งสำเร็จแล้ว"
 echo '============================================='
