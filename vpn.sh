@@ -82,7 +82,7 @@ FRIENDLY_NAME "PROFILE"
 client
 dev tun
 proto tcp
-remote xxxxxxxxx 442
+remote xxxxxxxxx 992
 resolv-retry infinite
 route-method exe
 nobind
