@@ -79,18 +79,28 @@ sed -i $MYIP2 /etc/openvpn/UDP.ovpn;
 # Buat config client SSL
 cat > /etc/openvpn/SSL.ovpn <<-END
 FRIENDLY_NAME "PROFILE"
+
+auth-user-pass
 client
 dev tun
 proto tcp
 remote xxxxxxxxx 992
+connect-retry 1
+connect-timeout 120
 resolv-retry infinite
 route-method exe
 nobind
+ping 5
+ping-restart 30
 persist-key
 persist-tun
-auth-user-pass
-comp-lzo
+persist-remote-ip
+mute-replay-warnings
 verb 3
+cipher none
+comp-lzo
+script-security 3
+
 END
 
 sed -i $MYIP2 /etc/openvpn/SSL.ovpn;
