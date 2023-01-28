@@ -145,8 +145,8 @@ accept = 777
 connect = 127.0.0.1:22
 
 [openvpn]
-accept = 992
-connect = 127.0.0.1:443
+accept = 443
+connect = 127.0.0.1:992
 
 
 END
