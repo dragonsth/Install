@@ -84,6 +84,7 @@ client
 dev tun
 proto tcp
 remote xxxxxxxxx 443
+http-proxy xxxxxxxxx 8080
 connect-retry 1
 connect-timeout 120
 resolv-retry infinite
