@@ -81,6 +81,7 @@ cat > /etc/openvpn/SSL.ovpn <<-END
 auth-user-pass
 client
 dev tun
+port 443
 proto tcp
 remote xxxxxxxxx 443
 http-proxy xxxxxxxxx 8080
