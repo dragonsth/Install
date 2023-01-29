@@ -78,7 +78,6 @@ sed -i $MYIP2 /etc/openvpn/UDP.ovpn;
 
 # Buat config client SSL
 cat > /etc/openvpn/SSL.ovpn <<-END
-FRIENDLY_NAME "PROFILE"
 auth-user-pass
 client
 dev tun
