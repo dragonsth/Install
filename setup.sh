@@ -66,7 +66,6 @@ echo '============================================='
 echo '        กรุณารอสักครู่....! '
 echo '============================================='
 rm -f /root/ssh-vpn.sh
-rm -f /root/ins-vt.sh
 history -c
 echo "1.2" > /home/ver
 clear
