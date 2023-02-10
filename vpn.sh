@@ -28,8 +28,8 @@ cp /usr/lib/x86_64-linux-gnu/openvpn/plugins/openvpn-plugin-auth-pam.so /usr/lib
 sed -i 's/#AUTOSTART="all"/AUTOSTART="all"/g' /etc/default/openvpn
 
 # restart openvpn dan cek status openvpn
-systemctl enable --now openvpn-server@server-tcp-443
-systemctl enable --now openvpn-server@server-udp-1194
+systemctl enable --now openvpn-server@server-tcp-1194
+systemctl enable --now openvpn-server@server-udp-2200
 /etc/init.d/openvpn restart
 /etc/init.d/openvpn status
 
@@ -37,13 +37,13 @@ systemctl enable --now openvpn-server@server-udp-1194
 echo 1 > /proc/sys/net/ipv4/ip_forward
 sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
 
-# Buat config client TCP 443
+# Buat config client TCP 1194
 cat > /etc/openvpn/TCP.ovpn <<-END
 FRIENDLY_NAME "PROFILE"
 client
 dev tun
 proto tcp
-remote xxxxxxxxx 443 
+remote xxxxxxxxx 1194
 http-proxy xxxxxxxxx 8080
 resolv-retry infinite
 route-method exe
@@ -57,13 +57,13 @@ END
 
 sed -i $MYIP2 /etc/openvpn/TCP.ovpn;
 
-# Buat config client UDP 1194
+# Buat config client UDP 2200
 cat > /etc/openvpn/UDP.ovpn <<-END
 FRIENDLY_NAME "PROFILE"
 client
 dev tun
 proto udp
-remote xxxxxxxxx 1194
+remote xxxxxxxxx 2200
 resolv-retry infinite
 route-method exe
 nobind
@@ -83,7 +83,7 @@ client
 dev tun
 port 443
 proto tcp
-remote xxxxxxxxx 443
+remote xxxxxxxxx 992
 http-proxy xxxxxxxxx 8080
 connect-retry 1
 connect-timeout 120
@@ -109,20 +109,20 @@ cd
 # pada tulisan xxx ganti dengan alamat ip address VPS anda 
 /etc/init.d/openvpn restart
 
-# masukkan certificatenya ke dalam config client TCP 443
+# masukkan certificatenya ke dalam config client TCP 1194
 echo '<ca>' >> /etc/openvpn/TCP.ovpn
 cat /etc/openvpn/server/ca.crt >> /etc/openvpn/TCP.ovpn
 echo '</ca>' >> /etc/openvpn/TCP.ovpn
 
-# Copy config OpenVPN client ke home directory root agar mudah didownload ( TCP 443 )
+# Copy config OpenVPN client ke home directory root agar mudah didownload ( TCP 1194 )
 cp /etc/openvpn/TCP.ovpn /home/vps/public_html/TCP.ovpn
 
-# masukkan certificatenya ke dalam config client UDP 1194
+# masukkan certificatenya ke dalam config client UDP 2200
 echo '<ca>' >> /etc/openvpn/UDP.ovpn
 cat /etc/openvpn/server/ca.crt >> /etc/openvpn/UDP.ovpn
 echo '</ca>' >> /etc/openvpn/UDP.ovpn
 
-# Copy config OpenVPN client ke home directory root agar mudah didownload ( UDP 1194 )
+# Copy config OpenVPN client ke home directory root agar mudah didownload ( UDP 2200 )
 cp /etc/openvpn/UDP.ovpn /home/vps/public_html/UDP.ovpn
 
 # masukkan certificatenya ke dalam config client SSL
