@@ -1,6 +1,6 @@
 #!/bin/bash
+# สคริป​โดย​ dragonsth
 #
-# By dragonsth
 # ==================================================
 
 # initialisasi var
