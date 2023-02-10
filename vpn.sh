@@ -83,7 +83,7 @@ client
 dev tun
 port 443
 proto tcp
-remote xxxxxxxxx 443
+remote xxxxxxxxx 992
 http-proxy xxxxxxxxx 8080
 connect-retry 1
 connect-timeout 120
