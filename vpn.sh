@@ -80,26 +80,17 @@ sed -i $MYIP2 /etc/openvpn/UDP.ovpn;
 cat > /etc/openvpn/SSL.ovpn <<-END
 FRIENDLY_NAME "PROFILE"
 client
-verb 3
 dev tun
 proto tcp
-port 443
+remote xxxxxxxxx 992
+resolv-retry infinite
+route-method exe
 nobind
 persist-key
 persist-tun
-comp-lzo
 auth-user-pass
-resolv-retry infinite
-route-method exe
-remote xxxxxxxxx 443
-http-proxy xxxxxxxxx 8080
-http-proxy-option EXT1 "Connection: Keep-Alive
-http-proxy-option EXT1 "POST: HTTP/1.1"
-http-proxy-option EXT1 "Host: xxxxxxxxx"
-http-proxy-option VERSION 1.1
-dhcp-option DNS 1.1.1.1
-dhcp-option DNS 1.0.0.1
-redirect-gateway def1
+comp-lzo
+verb 3
 END
 
 sed -i $MYIP2 /etc/openvpn/SSL.ovpn;
